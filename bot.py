@@ -272,7 +272,7 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     db.set_config("primary_chat_id", str(chat_id))
     db.store_message(chat_id, "system", "/start", datetime.now())
     await update.message.reply_text(
-        "👋 *Halo! Kebun Aira Bot siap\\!*\n\n"
+        "👋 *Halo! Kebun Aira Bot siap!*\n\n"
         "Saya akan bantu kelola kebun kamu:\n"
         "🌿 Rencana mingguan otomatis dari Excel\n"
         "💼 Task karyawan + reminder otomatis\n"
@@ -280,7 +280,7 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🤖 Penyesuaian rencana via AI\n\n"
         "Chat ID terdaftar ✅ Pengingat akan dikirim ke sini.\n\n"
         "Ketik /bantuan untuk semua perintah.",
-        parse_mode=ParseMode.MARKDOWN_V2,
+        parse_mode=ParseMode.MARKDOWN,
     )
 
 
